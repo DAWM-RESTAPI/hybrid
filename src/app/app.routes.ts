@@ -3,10 +3,23 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes),
-  },  {
-    path: 'tab4',
-    loadComponent: () => import('./tab4/tab4.page').then( m => m.Tab4Page)
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
-
+  {
+    path: 'home',
+    loadComponent: () => import('./home/home.page').then(m => m.HomePage),
+  },
+  {
+    path: 'lessons',
+    loadComponent: () => import('./lessons/lessons.page').then(m => m.LessonsPage),
+  },
+  {
+    path: 'evaluation-details',
+    loadComponent: () => import('./evaluation-details/evaluation-details.page').then(m => m.EvaluationDetailsPage),
+  },
+  {
+    path: 'about',
+    loadComponent: () => import('./about/about.page').then(m => m.AboutPage),
+  },
 ];

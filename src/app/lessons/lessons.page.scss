@@ -1,0 +1,43 @@
+ion-header, ion-toolbar {
+    --background: #f8f9fa;
+    --color: #343a40;
+  }
+  
+  ion-title {
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+  
+  ion-card {
+    margin-bottom: 20px;
+  }
+  
+  ion-item h2 {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  ion-item p {
+    font-size: 0.9em;
+    color: #6c757d;
+  }
+  
+  ion-icon {
+    font-size: 1.5em;
+  }
+  
+  ion-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-col p {
+    font-size: 1em;
+    color: #343a40;
+  }
+  
+  ion-col ion-icon {
+    color: #007bff;
+  }
+  
