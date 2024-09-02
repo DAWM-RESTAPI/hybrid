@@ -22,4 +22,8 @@ export const routes: Routes = [
     path: 'about',
     loadComponent: () => import('./about/about.page').then(m => m.AboutPage),
   },
+  {
+    path: 'evaluaciones/:materiaId',
+    loadComponent: () => import('./evaluaciones/evaluaciones.component').then(m => m.EvaluacionesComponent)
+  }
 ];

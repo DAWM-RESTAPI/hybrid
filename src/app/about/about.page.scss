@@ -1,56 +1,56 @@
+/* Estilos para el header y toolbar */
 ion-header, ion-toolbar {
-    --background: #1e3a8a;  // Un azul oscuro para la cabecera
-    --color: #ffffff;       // Texto en blanco
-    font-size: 1.4em;       // Tamaño de letra aumentado para el título del header
-  }
+  --background: #25386c;  // Un azul oscuro para la cabecera
+  --color: #ffffff;       // Texto en blanco
+  font-size: 1.4em;       // Tamaño de letra aumentado para el título del header
+}
+
+/* Estilos para el contenido de la página about */
+ion-content.about-content {
+  background: #000000;  // Fondo negro
+  padding: 16px;        // Padding para el contenido
+}
+
+/* Estilos para las tarjetas de la página about */
+.about-card {
+  background: #1e1e1e;  // Fondo gris oscuro para las tarjetas
+  color: #ffffff;       // Texto blanco
+  margin-bottom: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
   
-  ion-content.about-content {
-    background: #000000;  // Fondo negro
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); // Sombra blanca suave al hover
   }
-  
-  .about-card {
-    background: #1e1e1e;  // Fondo gris oscuro para las tarjetas
-    color: #ffffff;       // Texto blanco
-    margin-bottom: 20px;
-    border-radius: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); // Sombra blanca suave al hover
-    }
-  }
-  
-  ion-card-header {
-    background: #2563eb; // Azul más claro
-    color: white;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    font-size: 1.4em;   // Tamaño de letra aumentado para el título de las tarjetas
-  }
-  
-  .header-icon {
-    font-size: 2.2em;   // Tamaño de icono aumentado
-    margin-right: 10px;
-  }
-  
-  ion-card-title {
-    font-size: 1.6em;   // Tamaño de letra aumentado para los títulos
-    font-weight: bold;
-    color: #ffffff; // Asegura que el título sea blanco
-  }
-  
-  ion-card-content {
-    font-size: 1.2em;   // Tamaño de letra aumentado para el contenido
-    color: #d1d5db; // Texto gris claro para mejor contraste y legibilidad
-  }
-  
-  p {
-    margin: 0;
-    line-height: 1.6em;
-    font-size: 1.2em;   // Tamaño de letra aumentado para los párrafos
-  }
-  
+}
+
+/* Estilos para el header de las tarjetas */
+ion-card-header {
+  background: #3d6dd4; // Azul más claro
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.4em;   // Tamaño de letra aumentado para el título de las tarjetas
+}
+
+/* Estilos para el contenido de las tarjetas */
+ion-card-content {
+  padding-top: 16px;  // Padding superior para el contenido de las tarjetas
+  padding: 16px;      // Padding general para el contenido de las tarjetas
+}
+
+/* Estilos adicionales para mejorar la estética */
+.about-card p {
+  margin: 0;          // Eliminar margen de los párrafos dentro de las tarjetas
+  line-height: 1.5;   // Mejorar la legibilidad del texto
+}
+
+.about-card img {
+  width: 100%;        // Asegurar que las imágenes ocupen el ancho completo de la tarjeta
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

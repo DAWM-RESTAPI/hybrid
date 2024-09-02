@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProviderService } from '../services/provider.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -22,11 +24,11 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class HomePage {
 
-  public query:any;
+
 
   subjects: any[] = [];
 
-  constructor(private dataProvider: ProviderService) { }
+  constructor(private dataProvider: ProviderService, private router: Router) { }
 
   ngOnInit() {
     this.loadData()
@@ -41,6 +43,10 @@ export class HomePage {
 
     console.log(this.subjects);
     console.log("Hola");
+  }
+
+  goToEvaluaciones(materiaId: number) {
+    this.router.navigate(['/evaluaciones', materiaId]);
   }
 
 }

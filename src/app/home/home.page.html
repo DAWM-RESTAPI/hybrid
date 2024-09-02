@@ -23,8 +23,7 @@
   <ion-searchbar placeholder="Materias - Clases" color="light"></ion-searchbar>
 
   <ion-list>
-    <ion-card class="subject-card" *ngFor="let subject of subjects">
-
+    <ion-card class="subject-card" *ngFor="let subject of subjects" (click)="goToEvaluaciones(subject.id)">
       <ion-card-header>
         <ion-card-title>{{ subject.materia }}</ion-card-title>
       </ion-card-header>
