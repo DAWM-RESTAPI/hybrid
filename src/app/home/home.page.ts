@@ -3,6 +3,9 @@ import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ProviderService } from '../services/provider.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-home',
@@ -13,31 +16,31 @@ import { RouterModule } from '@angular/router';
     IonicModule,  // Asegúrate de importar IonicModule aquí
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule, HttpClientModule,
   ],
+  providers: [ProviderService]
 })
 export class HomePage {
 
-  subjects = [
-    {
-      name: 'Inglés - 8A',
-      members: '+50',
-      image: 'assets/ingles.png'
-    },
-    {
-      name: 'Contabilidad - 8A',
-      members: '+50',
-      image: 'assets/contabilidad.png'
-    },
-    {
-      name: 'Lenguaje - 8A',
-      members: '+50',
-      image: 'assets/lenguaje.png'
-    },
-    {
-      name: 'Matemáticas - 8A',
-      members: '+50',
-      image: 'assets/matematicas.png'
-    }
-  ];
+  public query:any;
+
+  subjects: any[] = [];
+
+  constructor(private dataProvider: ProviderService) { }
+
+  ngOnInit() {
+    this.loadData()
+  }
+
+  loadData() {
+    this.dataProvider.getResponse().subscribe( (response: any) => {
+      console.log(response);
+      if( response != null) {
+        this.subjects.push(...response.map((materia: any) => materia));
+    }});
+
+    console.log(this.subjects);
+    console.log("Hola");
+  }
+
 }

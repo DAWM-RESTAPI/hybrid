@@ -30,54 +30,34 @@ ion-label {
 }
 
 ion-button {
-  --background: #0066cc; /* Botón azul */
-  --color: #ffffff;
-  border-radius: 12px;
-  padding: 8px 16px;
+  --background: #4a4a6a; /* Fondo del botón */
+  --color: #ffffff; /* Color del texto del botón */
 }
 
-ion-searchbar {
-  --background: #f0f0f5; /* Fondo claro para el buscador */
-  --color: #000000; /* Texto del buscador en negro */
+.subject-card {
+  background-color: #2d2d44; /* Fondo de la tarjeta de la materia */
+  color: #ffffff; /* Color del texto de la tarjeta */
   border-radius: 12px;
   margin-bottom: 20px;
 }
 
-ion-card {
-  --background: #2d2d44; /* Fondo de las tarjetas */
-  --color: #ffffff; /* Texto blanco en las tarjetas */
-  border-radius: 12px;
-  transition: transform 0.2s;
+.subject-card ion-card-header {
+  background-color: #3a3a5c; /* Fondo del encabezado de la tarjeta */
+  color: #ffffff; /* Color del texto del encabezado */
 }
 
-ion-card:hover {
-  transform: scale(1.05); /* Efecto de hover para embellecer */
+.subject-card ion-card-content {
+  background-color: #2d2d44; /* Fondo del contenido de la tarjeta */
+  color: #ffffff; /* Color del texto del contenido */
 }
 
-ion-card-title {
-  font-weight: bold;
-  font-size: 1.1em;
+.subject-card img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
-ion-card-content {
-  display: flex;
-  align-items: center;
-  font-size: 0.9em;
-}
-
-ion-icon {
-  margin-right: 8px;
-}
-
-ion-footer {
-  --background: #000000; /* Fondo negro para el footer */
-}
-
-ion-tab-bar {
-  --color-selected: #0066cc; /* Color azul para el tab seleccionado */
-  --color: #f0f0f5; /* Color claro para los tabs no seleccionados */
-}
-
-ion-tab-button {
-  --color-selected: #ffffff;
+ion-list {
+  border-radius: 12px; /* Ajusta el valor según tus necesidades */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
 }

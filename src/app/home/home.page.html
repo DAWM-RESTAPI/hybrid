@@ -22,31 +22,16 @@
 
   <ion-searchbar placeholder="Materias - Clases" color="light"></ion-searchbar>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6">
-        <ion-card color="primary">
-          <ion-card-header>
-            <ion-card-title color="light">Inglés - 8A</ion-card-title>
-          </ion-card-header>
-          <ion-card-content color="light">
-            <ion-icon name="people"></ion-icon> +50 Miembros
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
+  <ion-list>
+    <ion-card class="subject-card" *ngFor="let subject of subjects">
 
-      <ion-col size="6">
-        <ion-card color="primary">
-          <ion-card-header>
-            <ion-card-title color="light">Contabilidad - 8A</ion-card-title>
-          </ion-card-header>
-          <ion-card-content color="light">
-            <ion-icon name="people"></ion-icon> +50 Miembros
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <!-- Otros ion-col similares para las demás materias -->
-  </ion-grid>
+      <ion-card-header>
+        <ion-card-title>{{ subject.materia }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Cantidad de estudiantes: {{ subject.cantidad_estudiantes }}</p>
+        <p>Evaluaciones: {{ subject.evaluaciones.length }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>
