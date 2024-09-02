@@ -1,13 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>evaluation-details</ion-title>
+
+    <!-- 1. Título de la vista -->
+    <ion-title>
+      Subir nueva Evaluación
+    </ion-title>
+
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">evaluation-details</ion-title>
-    </ion-toolbar>
   </ion-header>
+
+  <!-- 2. Muestra los elementos -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let photo of photoService.photos; index as position">
+        <ion-img [src]="photo.webviewPath"></ion-img>
+        <p>filepath:  {{ photo.filepath }} </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+<!-- Muestra el botón y habilita el servicio de la cámara -->
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button (click)="addPhotoToGallery()">
+    <img src="assets\camera-retro-solid.svg" alt="Cámara" style="width: 24px; height: 24px;" />
+  </ion-fab-button>
+</ion-fab>
+
+
 </ion-content>

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -13,4 +12,8 @@ import { CommonModule } from '@angular/common';
     CommonModule  // Importa el CommonModule para utilizar directivas comunes de Angular
   ]
 })
-export class AppComponent {}
+export class AppComponent {
+
+  constructor() {
+  }
+}
